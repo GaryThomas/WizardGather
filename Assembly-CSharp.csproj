@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Workspace\Obstacle.cs" />
      <Compile Include="Assets\Workspace\Test2D.cs" />
+     <Compile Include="Assets\Workspace\Walk.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/home/gthomas/misc/projects/unity/SandBox/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
