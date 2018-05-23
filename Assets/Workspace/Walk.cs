@@ -5,6 +5,8 @@ using UnityEngine;
 public class Walk : MonoBehaviour
 {
 	public float walkSpeed = 2f;
+	public Vector2 jumpAdjust = new Vector2 (2.5f, 8.5f);
+	public int moveDir = 1;
 	Rigidbody2D _rb;
 	Vector2 walkVelocity;
 	bool touchingGround = false;
@@ -25,7 +27,9 @@ public class Walk : MonoBehaviour
 		//_rb.velocity += walkVelocity;
 		//_rb.AddForce (transform.forward * walkSpeed);
 		if (touchingGround) {
-			_rb.velocity = new Vector2 (walkSpeed, _rb.velocity.y);
+			float newX = Mathf.Max (Mathf.Abs (_rb.velocity.x), walkSpeed);
+			_rb.velocity = new Vector2 (moveDir * newX, _rb.velocity.y);
+			Debug.Log ("Player - velocity: " + _rb.velocity.ToString ());
 		}
 	}
 
@@ -34,6 +38,15 @@ public class Walk : MonoBehaviour
 		Debug.Log (gameObject.name + " Collided with " + other.gameObject.name);
 		if (other.gameObject.tag == "Ground") {
 			touchingGround = true;
+		}
+		if (other.gameObject.tag == "Spikes") {
+			Debug.Log ("OUCH!!");
+		}
+		if (other.gameObject.tag == "JumpUp") {
+			Debug.Log (gameObject.name + " hit JumpUp: " + other.gameObject.name);
+			_rb.velocity += jumpAdjust;
+			_rb.AddForce (jumpAdjust);
+			Destroy (other.gameObject);
 		}
 	}
 

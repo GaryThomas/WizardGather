@@ -51,7 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Workspace\JumpUp.cs" />
      <Compile Include="Assets\Workspace\Obstacle.cs" />
+     <Compile Include="Assets\Workspace\ReverseDir.cs" />
      <Compile Include="Assets\Workspace\Test2D.cs" />
      <Compile Include="Assets\Workspace\Walk.cs" />
  <Reference Include="UnityEditor.StandardEvents">
