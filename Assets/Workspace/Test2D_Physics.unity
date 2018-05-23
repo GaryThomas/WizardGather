@@ -354,8 +354,8 @@ GameObject:
   - component: {fileID: 837213842}
   - component: {fileID: 837213841}
   - component: {fileID: 837213840}
-  - component: {fileID: 837213839}
   - component: {fileID: 837213844}
+  - component: {fileID: 837213839}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: Player
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 837213838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49a171b1878bb4f55bf8a09a78101fd6, type: 3}
+  m_Script: {fileID: 11500000, guid: 71ae64a345a4c4106a5a3cae2b0a4d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 2.5

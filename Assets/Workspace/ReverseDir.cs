@@ -8,7 +8,7 @@ public class ReverseDir : MonoBehaviour
 	{
 		Debug.Log (gameObject.name + " Collided with " + other.gameObject.name);
 		if (other.gameObject.tag == "Player") {
-			Walk wizard = other.gameObject.GetComponent<Walk> ();
+			Wizard wizard = other.gameObject.GetComponent<Wizard> ();
 			Rigidbody2D _rb = other.gameObject.GetComponent<Rigidbody2D> ();
 			_rb.transform.localScale = new Vector2 (_rb.transform.localScale.x * -1, _rb.transform.localScale.y);
 			wizard.moveDir *= -1;

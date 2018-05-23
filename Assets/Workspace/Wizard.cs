@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Walk : MonoBehaviour
+public class Wizard : MonoBehaviour
 {
 	public float walkSpeed = 2f;
 	public Vector2 jumpAdjust = new Vector2 (2.5f, 8.5f);
