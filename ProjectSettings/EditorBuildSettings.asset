@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Workspace/Test2D_Physics.unity
-    guid: 0a8c6273f4f9c41dfa6005d764486e2b
+    path: Assets/Level1.unity
+    guid: 19f5ab0fefa944888ad02482880375c0
+  - enabled: 1
+    path: Assets/Level2.unity
+    guid: 6b78443a3f0ed426199bfdf51b06b9de
   m_configObjects: {}

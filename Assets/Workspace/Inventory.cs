@@ -20,7 +20,6 @@ public class Inventory : MonoBehaviour
 
 	void Awake ()
 	{
-		//_gc = Object.FindObjectOfType<GameController> ();
 		_gc = GameController.Instance;
 	}
 
@@ -42,13 +41,16 @@ public class Inventory : MonoBehaviour
 	IEnumerator ShowInstructions ()
 	{
 		if (infoImage != null && !_gc.InstructionsDisplayed) {
-			infoImage.gameObject.SetActive (true);
-			yield return new WaitForSeconds (1.0f);
+			infoImage.gameObject.SetActive (false);
+			yield return new WaitForSeconds (2.0f);
 			infoImage.gameObject.SetActive (true);
 			foreach (GameObject obj in inventory) {
 				Debug.Log ("Inventory: " + obj.name);
 				InventoryItem item = obj.GetComponent<InventoryItem> ();
 				SpriteRenderer renderer = obj.GetComponent<SpriteRenderer> ();
+				BoxCollider2D box = obj.GetComponent<BoxCollider2D> ();
+				obj.SetActive (false);
+				Debug.Log ("item: " + item.GetInstanceID ().ToString () + ", renderer = " + renderer.GetInstanceID ().ToString ());
 				_infoText.text = item.description;
 				_infoIcon.sprite = renderer.sprite;
 				if (obj != inventory [inventory.Count - 1]) {
@@ -60,6 +62,7 @@ public class Inventory : MonoBehaviour
 				while (!nextItem) {
 					yield return null;
 				}
+				obj.SetActive (true);
 			}
 			infoImage.gameObject.SetActive (false);
 		}

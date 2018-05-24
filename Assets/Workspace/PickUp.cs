@@ -9,7 +9,6 @@ public abstract class PickUp : MonoBehaviour
 
 	protected virtual void Awake ()
 	{
-		//_pickups = GetComponent<LevelPickUps> ();
 	}
 
 	protected virtual void PickUpItem ()

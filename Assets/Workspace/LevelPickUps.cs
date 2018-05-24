@@ -12,11 +12,13 @@ public class LevelPickUps : MonoBehaviour
 
 	private int itemsCollected;
 	private bool doorLocked;
+	private GameController _gc;
 
 	void Start ()
 	{
 		BoxCollider2D[] boxes = gameObject.GetComponentsInChildren<BoxCollider2D> ();
 		BoxCollider2D myBox = GetComponent<BoxCollider2D> ();
+		_gc = GameController.Instance;
 		levelItems = new List<GameObject> ();
 		foreach (BoxCollider2D box in boxes) {
 			if (box != myBox) {
@@ -50,6 +52,7 @@ public class LevelPickUps : MonoBehaviour
 				wizard.Die ();
 			} else {
 				Debug.Log ("Go to next level!");
+				_gc.LoadNextLevel ();
 			}
 		}
 	}

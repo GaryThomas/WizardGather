@@ -8,7 +8,6 @@ public class DragObject : MonoBehaviour
 
 	void Awake ()
 	{
-		//_gc = Object.FindObjectOfType<GameController> ();
 		_gc = GameController.Instance;
 	}
 

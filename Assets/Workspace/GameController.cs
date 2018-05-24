@@ -46,4 +46,12 @@ public class GameController : MonoBehaviour
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 		levelStarted = false;
 	}
+
+	public void LoadNextLevel ()
+	{
+		int nextLevel = (SceneManager.GetActiveScene ().buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
+		Debug.Log ("LoadNextLevel = " + nextLevel.ToString () + ", active = " + SceneManager.GetActiveScene ().buildIndex.ToString () + ", total = " + SceneManager.sceneCountInBuildSettings.ToString ());
+		SceneManager.LoadScene (nextLevel);
+		levelStarted = false;
+	}
 }
