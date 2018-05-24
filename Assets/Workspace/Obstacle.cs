@@ -9,6 +9,8 @@ public class Obstacle : MonoBehaviour
 		Debug.Log (gameObject.name + " Collided with " + other.gameObject.name);
 		if (other.gameObject.tag == "Player") {
 			Debug.Log ("*** OUCH!");
+			Wizard wizard = other.gameObject.GetComponent<Wizard> ();
+			wizard.Die ();
 		}
 	}
 }
