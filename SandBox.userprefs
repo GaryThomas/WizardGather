@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Workspace/Walk.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Workspace/Wizard.cs">
     <Files>
-      <File FileName="Assets/Workspace/Test2D.cs" Line="22" Column="3" />
+      <File FileName="Assets/Workspace/Test2D.cs" Line="1" Column="1" />
       <File FileName="Assets/Workspace/Obstacle.cs" Line="1" Column="1" />
-      <File FileName="Assets/Workspace/Walk.cs" Line="28" Column="59" />
+      <File FileName="Assets/Workspace/JumpUp.cs" Line="10" Column="42" />
+      <File FileName="Assets/Workspace/ReverseDir.cs" Line="11" Column="56" />
+      <File FileName="Assets/Workspace/Wizard.cs" Line="13" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
