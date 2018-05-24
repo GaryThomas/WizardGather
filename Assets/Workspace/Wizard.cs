@@ -21,7 +21,8 @@ public class Wizard : MonoBehaviour
 		_anim.SetBool ("Walking", false);
 		_box = GetComponent<BoxCollider2D> ();
 		_ground = LayerMask.GetMask ("Ground");
-		_gc = Object.FindObjectOfType<GameController> ();
+		//_gc = Object.FindObjectOfType<GameController> ();
+		_gc = GameController.Instance;
 	}
 
 	void Start ()

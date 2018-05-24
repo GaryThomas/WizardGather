@@ -91,7 +91,9 @@
      <Compile Include="Assets\Workspace\Inventory.cs" />
      <Compile Include="Assets\Workspace\InventoryItem.cs" />
      <Compile Include="Assets\Workspace\JumpUp.cs" />
+     <Compile Include="Assets\Workspace\LevelPickUps.cs" />
      <Compile Include="Assets\Workspace\Obstacle.cs" />
+     <Compile Include="Assets\Workspace\PickUp.cs" />
      <Compile Include="Assets\Workspace\ReverseDir.cs" />
      <Compile Include="Assets\Workspace\Test2D.cs" />
      <Compile Include="Assets\Workspace\Wizard.cs" />

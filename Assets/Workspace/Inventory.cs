@@ -20,7 +20,8 @@ public class Inventory : MonoBehaviour
 
 	void Awake ()
 	{
-		_gc = Object.FindObjectOfType<GameController> ();
+		//_gc = Object.FindObjectOfType<GameController> ();
+		_gc = GameController.Instance;
 	}
 
 	void Start ()
