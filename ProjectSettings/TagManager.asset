@@ -17,11 +17,11 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - PickUps
+  - Actions
+  - Player
+  - Hazards
   - 
   - 
   - 
@@ -43,4 +43,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2148982477
+    locked: 0
+  - name: Hazards
+    uniqueID: 510494099
+    locked: 0
+  - name: Actions
+    uniqueID: 3548085981
+    locked: 0
+  - name: Player
+    uniqueID: 3082966863
+    locked: 0
+  - name: PickUps
+    uniqueID: 2417047799
     locked: 0

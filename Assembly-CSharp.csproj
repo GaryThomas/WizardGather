@@ -84,19 +84,19 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-     <Compile Include="Assets\Workspace\CoinPickUp.cs" />
-     <Compile Include="Assets\Workspace\DragObject.cs" />
-     <Compile Include="Assets\Workspace\Fader.cs" />
-     <Compile Include="Assets\Workspace\GameController.cs" />
-     <Compile Include="Assets\Workspace\Inventory.cs" />
-     <Compile Include="Assets\Workspace\InventoryItem.cs" />
-     <Compile Include="Assets\Workspace\JumpUp.cs" />
-     <Compile Include="Assets\Workspace\LevelPickUps.cs" />
-     <Compile Include="Assets\Workspace\Obstacle.cs" />
-     <Compile Include="Assets\Workspace\PickUp.cs" />
-     <Compile Include="Assets\Workspace\ReverseDir.cs" />
-     <Compile Include="Assets\Workspace\Test2D.cs" />
-     <Compile Include="Assets\Workspace\Wizard.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\CoinPickUp.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\DragObject.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\Fader.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\GameController.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\Inventory.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\InventoryItem.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\JumpUp.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\LevelPickUps.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\Obstacle.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\PickUp.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\ReverseDir.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\Test2D.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\Wizard.cs" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
@@ -319,6 +319,12 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>/home/gthomas/Unity-2018.1.0b13/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="TextMeshPro-2017.3-Editor">
+ <HintPath>/home/gthomas/misc/projects/unity/SandBox/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="TextMeshPro-2017.3-Runtime">
+ <HintPath>/home/gthomas/misc/projects/unity/SandBox/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/home/gthomas/.config/unity3d/cache/packages/packages.unity.com/com.unity.ads@2.0.4/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
@@ -330,12 +336,6 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>/home/gthomas/.config/unity3d/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="TextMeshPro-2017.3-Runtime">
- <HintPath>/home/gthomas/misc/projects/unity/SandBox/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
- </Reference>
- <Reference Include="TextMeshPro-2017.3-Editor">
- <HintPath>/home/gthomas/misc/projects/unity/SandBox/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>/home/gthomas/Unity-2018.1.0b13/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
