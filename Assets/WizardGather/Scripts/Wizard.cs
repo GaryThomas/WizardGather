@@ -35,7 +35,7 @@ public class Wizard : MonoBehaviour
 		if (walking && _box.IsTouchingLayers (_ground)) {
 			float newX = Mathf.Max (Mathf.Abs (_rb.velocity.x), walkSpeed);
 			_rb.velocity = new Vector2 (moveDir * newX, _rb.velocity.y);
-			Debug.Log ("Player - velocity: " + _rb.velocity.ToString ());
+//			Debug.Log ("Player - velocity: " + _rb.velocity.ToString ());
 		}
 		_anim.SetBool ("Walking", _rb.velocity.magnitude > 0);
 	}

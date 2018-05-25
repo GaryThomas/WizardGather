@@ -86,6 +86,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\WizardGather\Scripts\CoinPickUp.cs" />
      <Compile Include="Assets\WizardGather\Scripts\DragObject.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\ExitLevel.cs" />
      <Compile Include="Assets\WizardGather\Scripts\Fader.cs" />
      <Compile Include="Assets\WizardGather\Scripts\GameController.cs" />
      <Compile Include="Assets\WizardGather\Scripts\Inventory.cs" />
