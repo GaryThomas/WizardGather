@@ -43,9 +43,14 @@ public class Inventory : MonoBehaviour
 		if (infoImage != null && !_gc.InstructionsDisplayed) {
 			infoImage.gameObject.SetActive (true);
 			yield return new WaitForSeconds (2.0f);
+			List<string> seen = new List<string> ();
 			foreach (GameObject obj in inventory) {
 				Debug.Log ("Inventory: " + obj.name);
 				InventoryItem item = obj.GetComponent<InventoryItem> ();
+				if (seen.Contains (item.description)) {
+					continue;
+				}
+				seen.Add (item.description);
 				SpriteRenderer renderer = obj.GetComponent<SpriteRenderer> ();
 				obj.SetActive (false);
 				Debug.Log ("item: " + item.GetInstanceID ().ToString () + ", renderer = " + renderer.GetInstanceID ().ToString ());
