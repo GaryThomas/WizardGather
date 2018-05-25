@@ -12,7 +12,7 @@ public class ExitLevel : MonoBehaviour
 	private bool doorLocked = true;
 	private GameController _gc;
 
-	void Start ()
+	void Awake ()
 	{
 		_gc = GameController.Instance;
 		exitSpriteRenderer = GetComponent<SpriteRenderer> ();

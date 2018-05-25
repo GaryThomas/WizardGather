@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Inventory : MonoBehaviour
+public class InfoScreen : MonoBehaviour
 {
-
-	[SerializeField] List<GameObject> inventory;
 
 	[SerializeField] Image infoImage;
 	[SerializeField] TMP_Text _infoText;
@@ -17,33 +15,15 @@ public class Inventory : MonoBehaviour
 
 	bool nextItem = false;
 	GameController _gc;
-	[SerializeField] InfoScreen _info;
 
 	void Awake ()
 	{
 		_gc = GameController.Instance;
-		//_info = Object.FindObjectOfType<InfoScreen> ();
 	}
 
-	void Start ()
+	public IEnumerator ShowInventory (List<GameObject> inventory)
 	{
-		BoxCollider2D[] boxes = gameObject.GetComponentsInChildren<BoxCollider2D> ();
-		inventory = new List<GameObject> ();
-		foreach (BoxCollider2D box in boxes) {
-			inventory.Add (box.gameObject);
-		}
-	}
-
-	public void OnInventoryStartupComplete ()
-	{
-		Debug.Log ("Inventory: Startup complete");
-		//StartCoroutine (ShowInstructions ());
-		StartCoroutine (_info.ShowInventory (inventory));
-	}
-
-	IEnumerator ShowInstructions ()
-	{
-		if (infoImage != null && !_gc.InstructionsDisplayed) {
+		if (infoImage != null && !GameController.Instance.InstructionsDisplayed) {
 			infoImage.gameObject.SetActive (true);
 			yield return new WaitForSeconds (2.0f);
 			List<string> seen = new List<string> ();
@@ -78,4 +58,6 @@ public class Inventory : MonoBehaviour
 	{
 		nextItem = true;
 	}
+	
+
 }

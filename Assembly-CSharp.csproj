@@ -89,6 +89,8 @@
      <Compile Include="Assets\WizardGather\Scripts\ExitLevel.cs" />
      <Compile Include="Assets\WizardGather\Scripts\Fader.cs" />
      <Compile Include="Assets\WizardGather\Scripts\GameController.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\GameStatus.cs" />
+     <Compile Include="Assets\WizardGather\Scripts\InfoScreen.cs" />
      <Compile Include="Assets\WizardGather\Scripts\Inventory.cs" />
      <Compile Include="Assets\WizardGather\Scripts\InventoryItem.cs" />
      <Compile Include="Assets\WizardGather\Scripts\JumpUp.cs" />
