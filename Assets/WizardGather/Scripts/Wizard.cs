@@ -13,6 +13,7 @@ public class Wizard : MonoBehaviour
 	LayerMask _ground;
 	bool walking = false;
 	GameController _gc;
+	Vector3 lastPos;
 
 	void Awake ()
 	{
@@ -22,6 +23,7 @@ public class Wizard : MonoBehaviour
 		_box = GetComponent<BoxCollider2D> ();
 		_ground = LayerMask.GetMask ("Ground");
 		_gc = GameController.Instance;
+		lastPos = transform.position;
 	}
 
 	void Start ()
@@ -34,7 +36,14 @@ public class Wizard : MonoBehaviour
 	{
 		if (walking && _box.IsTouchingLayers (_ground)) {
 			float newX = Mathf.Max (Mathf.Abs (_rb.velocity.x), walkSpeed);
-			_rb.velocity = new Vector2 (moveDir * newX, _rb.velocity.y);
+			// FIXME - sometimes the wizard gets stuck, not sure why
+			float jump = Mathf.Abs (transform.position.x - lastPos.x) < Mathf.Epsilon ? 2.0f : 0.0f;
+			lastPos = transform.position;
+			if (jump > 0f) {
+				Debug.Log ("*** Gave wizard a boost!");
+			}
+			// FIXME
+			_rb.velocity = new Vector2 (moveDir * newX, _rb.velocity.y + jump);
 //			Debug.Log ("Player - velocity: " + _rb.velocity.ToString ());
 		}
 		_anim.SetBool ("Walking", _rb.velocity.magnitude > 0);
