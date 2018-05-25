@@ -12,7 +12,6 @@ public class Wizard : MonoBehaviour
 	BoxCollider2D _box;
 	LayerMask _ground;
 	bool walking = false;
-	GameController _gc;
 	Vector3 lastPos;
 
 	void Awake ()
@@ -22,14 +21,12 @@ public class Wizard : MonoBehaviour
 		_anim.SetBool ("Walking", false);
 		_box = GetComponent<BoxCollider2D> ();
 		_ground = LayerMask.GetMask ("Ground");
-		_gc = GameController.Instance;
 		lastPos = transform.position;
 	}
 
 	void Start ()
 	{
 		walkVelocity = new Vector2 (walkSpeed, 0f);
-		//_rb.velocity = walkVelocity;
 	}
 
 	void Update ()
@@ -54,12 +51,12 @@ public class Wizard : MonoBehaviour
 		Debug.Log ("Wizard: Start walking");
 		walking = true;
 		_rb.velocity = walkVelocity;
-		_gc.StartLevel ();
+		GameController.Instance.StartLevel ();
 	}
 
 	public void Die ()
 	{
 		_anim.SetTrigger ("Death");
-		_gc.ReloadLevel ();
+		GameController.Instance.ReloadLevel ();
 	}
 }

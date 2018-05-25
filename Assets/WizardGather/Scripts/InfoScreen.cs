@@ -14,12 +14,6 @@ public class InfoScreen : MonoBehaviour
 	[SerializeField] TMP_Text _infoNextButtonText;
 
 	bool nextItem = false;
-	GameController _gc;
-
-	void Awake ()
-	{
-		_gc = GameController.Instance;
-	}
 
 	public IEnumerator ShowInventory (List<GameObject> inventory)
 	{

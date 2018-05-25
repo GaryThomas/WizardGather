@@ -7,12 +7,8 @@ public class LevelPickUps : MonoBehaviour
 
 	[SerializeField] List<GameObject> levelItems;
 	[SerializeField] ExitLevel exit;
-	//	[SerializeField] SpriteRenderer exitSpriteRenderer;
-	//	[SerializeField] Sprite lockedDoorSprite;
-	//	[SerializeField] Sprite unlockedDoorSprite;
 
 	private int itemsCollected;
-	//	private bool doorLocked;
 
 	void Start ()
 	{
@@ -26,16 +22,13 @@ public class LevelPickUps : MonoBehaviour
 		}
 		itemsCollected = 0;
 		exit.LockDoor (true);
-//		doorLocked = true;
 	}
 
 	public void Collect (GameObject item)
 	{
 		itemsCollected++;
 		if (AllCollected ()) {
-//			exitSpriteRenderer.sprite = unlockedDoorSprite;
 			exit.LockDoor (false);
-//			doorLocked = false;
 		}
 	}
 

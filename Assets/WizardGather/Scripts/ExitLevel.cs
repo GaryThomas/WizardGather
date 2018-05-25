@@ -10,11 +10,9 @@ public class ExitLevel : MonoBehaviour
 
 	private SpriteRenderer exitSpriteRenderer;
 	private bool doorLocked = true;
-	private GameController _gc;
 
 	void Awake ()
 	{
-		_gc = GameController.Instance;
 		exitSpriteRenderer = GetComponent<SpriteRenderer> ();
 	}
 
@@ -33,7 +31,7 @@ public class ExitLevel : MonoBehaviour
 				wizard.Die ();
 			} else {
 				Debug.Log ("Go to next level!");
-				_gc.LoadNextLevel ();
+				GameController.Instance.LoadNextLevel ();
 			}
 		}
 	}

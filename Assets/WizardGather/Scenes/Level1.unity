@@ -956,12 +956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
-  infoImage: {fileID: 833145137}
-  _infoText: {fileID: 298927561}
-  _infoIcon: {fileID: 1625321990}
-  _infoNextButton: {fileID: 1250352294}
-  _infoNextButtonText: {fileID: 1462745377}
-  _info: {fileID: 670589564}
+  info: {fileID: 670589564}
 --- !u!114 &1250352294 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114913775372278022, guid: 422ca79b6b7e749d48161281cef81d02,
